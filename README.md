@@ -2,4 +2,4 @@
 
 ## Table of content
 
-* [Array Reverse](challenges/ArrayReverse/README)
+* [Array Reverse](challenges/ArrayReverse/README.md)
