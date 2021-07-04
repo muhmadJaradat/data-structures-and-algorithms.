@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "linked-list/node/src",
+        "lib/src/main/java/challenges/LinkedList/challenges/LinkedList",
+        "lib/src/main/java/challenges/LinkedList"
+    ]
+}
