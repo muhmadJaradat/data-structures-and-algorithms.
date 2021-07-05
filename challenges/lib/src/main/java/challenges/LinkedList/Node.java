@@ -1,3 +1,5 @@
+package challenges.LinkedList;
+
 public class Node {
     private Node next;
     private String  data; 
