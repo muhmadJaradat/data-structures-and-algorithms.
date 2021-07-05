@@ -16,6 +16,4 @@ Else loop through the list. until the value had been found,
 then I inserted it before the node with the given value and make the reference for new node
 points to it.
 
-
-## Solution
-<!-- Show how to run your code, and examples of it in action -->
+for insert after method it's the same as insert before but when the node with the given value is found first make new the node reference points to the next node of the current node then make the current node points to the new node
