@@ -58,4 +58,22 @@ public class AppTest {
         list.insertAfter("beautiful","friends");
         assertEquals("{Hello} -> {my} -> {beautiful} -> {friends} -> {null}",list.toString());
     }
+@Test void kthFromLast(){
+        LinkedList list=new LinkedList();
+    list.append("Hello");
+    list.append("My");
+    list.append("beautiful");
+    list.append("friends");
+    //the node size is 4 here
+    // check a k value less than the size
+    assertEquals("My",list.kthFromEnd(2));
+    //check a k value of 0;
+    assertEquals("friends",list.kthFromEnd(0));
+    //check a k larger or equal to the size
+    assertEquals("5 is greater than or equal to the Node Length which is 4",list.kthFromEnd(5));
+    assertEquals("4 is greater than or equal to the Node Length which is 4",list.kthFromEnd(4));
+    // check when k is less than 0
+    assertEquals("k cannot be a negative value",list.kthFromEnd(-1));
+}
+    
 }
