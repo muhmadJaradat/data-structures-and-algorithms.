@@ -113,4 +113,23 @@ public void insertBefore(String value,String newValue){
         }
     }
 
+    public String zipListis(LinkedList listTwo) {
+        LinkedList mergedList = new LinkedList();
+        Node currentOfList1 = this.head;
+        Node currentOfList2 = listTwo.head;
+
+        while (currentOfList1 != null || currentOfList2 != null) {
+            if (currentOfList1 != null) {
+                mergedList.append(currentOfList1.getData());
+                currentOfList1=currentOfList1.getNext();
+            }
+            if (currentOfList2 != null) {
+                mergedList.append(currentOfList2.getData());
+                currentOfList2=currentOfList2.getNext();
+            }
+
+
+        }
+        return mergedList.toString();
+    }
 }
