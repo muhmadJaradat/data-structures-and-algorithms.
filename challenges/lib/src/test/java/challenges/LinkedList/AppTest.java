@@ -75,5 +75,22 @@ public class AppTest {
     // check when k is less than 0
     assertEquals("k cannot be a negative value",list.kthFromEnd(-1));
 }
+
+@Test void zipTwoLinkedLists(){
+        LinkedList list1=new LinkedList();
+        list1.append("1");
+        list1.append("2");
+        list1.append("3");
+
+        LinkedList list2=new LinkedList();
+        list2.append("4");
+        list2.append("5");
+        list2.append("6");
+
+     assertEquals("{1} -> {4} -> {2} -> {5} -> {3} -> {6} -> {null}",list1.zipListis(list2));
+}
+
+
+
     
 }

@@ -14,4 +14,6 @@
 
 * [Linked List Lab 7](challenges/linked-list/lab07/README.md)
 
+* [Linked List Lab 8](challenges/linked-list/lab08/README.md)
+
 * [Stack And Queues](challenges/StackAndQueues/README.md)
