@@ -132,4 +132,22 @@ public void insertBefore(String value,String newValue){
         }
         return mergedList.toString();
     }
+
+    public LinkedList reverseLinked(LinkedList list){
+        Node current=list.head;
+        Node previous=new Node("");
+        Node next=new Node("");
+        while (current!=null){
+            next= current.getNext();
+            current.setNext(previous);
+previous=current;
+current=next;
+
+        }
+list.head=previous;
+        return list;
+    }
+
+
+
 }
