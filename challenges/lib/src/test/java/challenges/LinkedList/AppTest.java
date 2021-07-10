@@ -89,5 +89,8 @@ public class AppTest {
 
      assertEquals("{1} -> {4} -> {2} -> {5} -> {3} -> {6} -> {null}",list1.zipListis(list2));
 }
+
+
+
     
 }
