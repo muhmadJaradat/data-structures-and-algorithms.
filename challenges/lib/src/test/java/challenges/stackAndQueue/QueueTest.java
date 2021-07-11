@@ -68,6 +68,7 @@ public class QueueTest {
         assertEquals( "2", queue.dequeue(),"Should return '2', the front value of the queue.");
         assertEquals( "3", queue.dequeue(),"Should return '3', the front value of the queue.");
         assertTrue( queue.isEmpty(),"Queue should be empty after dequeueing all items.");
+
     }
 
     @Test
