@@ -4,9 +4,15 @@ public class Queue<T> {
     private Node front;
     private Node rear;
     int size=0;
+
+
+
+
+
     public boolean isEmpty(){
         return size==0?true:false;
     }
+
     public void enqueue(T value){
         Node node=new Node(value);
         if(isEmpty()){
@@ -42,5 +48,9 @@ public class Queue<T> {
 
     public Node getRear() {
         return rear;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
