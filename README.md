@@ -21,3 +21,5 @@
 * [Pseudo Code](challenges/PseudoCode/README.md)
 
 * [Animal Shelter](challenges/animalshelter/README.md)
+
+* [Brackets Checker](challenges/BracketsChecker/README.md)
