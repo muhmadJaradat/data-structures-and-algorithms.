@@ -23,3 +23,5 @@
 * [Animal Shelter](challenges/animalshelter/README.md)
 
 * [Brackets Checker](challenges/BracketsChecker/README.md)
+
+* [Trees](challenges/tree/README.md)
