@@ -3,8 +3,33 @@
  */
 package challenges;
 
+import challenges.tree.BinarySearchTree;
+import challenges.tree.BinaryTree;
+import challenges.tree.Node;
+
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    public static void main(String[] args) {
+        BinaryTree binaryTree=new BinaryTree();
+        Node node=new Node(1);
+        binaryTree.setRoot(node);
+        binaryTree.getRoot().setLeft(new Node(2));
+        binaryTree.getRoot().setRight(new Node(3));
+//        binaryTree.preOrder(binaryTree.getRoot());
+//        System.out.println("----");
+//        binaryTree.postOrder(binaryTree.getRoot());
+//        System.out.println("----");
+//        binaryTree.inOrder(binaryTree.getRoot());
+        BinarySearchTree bst=new BinarySearchTree();
+        System.out.println(bst.getRoot());
+        bst.setRoot(new Node(3));
+        System.out.println(bst.getRoot().getKey());
+        bst.add(4);
+        bst.add(2);
+        bst.add(7);
+        bst.add(5);
+        bst.add(8);
+        bst.add(1);
+        System.out.println(bst.contain(10));
+
     }
 }
