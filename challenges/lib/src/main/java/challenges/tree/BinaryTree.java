@@ -33,22 +33,26 @@ public class BinaryTree {
         return list;
     }
 
-    public int findMaxVal (){
-        int max = Integer.MIN_VALUE;
-        return findMaxValUtil(root,max);
+    public  int findMaxValue() throws IllegalStateException {
+        if(this.root == null) {
+            throw new IllegalStateException();
+        }
+        return findMaxHelper(this.root);
     }
 
-    private int findMaxValUtil (Node current,int max){
-        // base case -> if node is empty return current max val
-        if(current == null) return max;
+    private  int findMaxHelper(Node root) {
+        int max = root.getKey();
+        if(root.getLeft() != null) {
+            max = max(max, findMaxHelper(root.getLeft()));
+        }
+        if(root.getRight() != null) {
+            max = max(max, findMaxHelper(root.getRight()));
+        }
+        return max;
+    }
 
-        if (current.getKey() > max)
-            max = current.getKey();
-
-        return current.getKey() > max
-                ? findMaxValUtil(current.getLeft(),max)
-                : findMaxValUtil(current.getRight(),max);
-
+    private static int max(int a, int b) {
+        return Math.max(a, b);
     }
 
     public Node getRoot() {
