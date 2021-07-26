@@ -14,9 +14,9 @@ public class TreeTest {
         BinaryTree bt=new BinaryTree();
         assertEquals(null,bt.getRoot());
 
-        // instantiate a tree with a single root node
+        // Check when only the tree has root
         bt.setRoot(new Node(1));
-        assertEquals(1,bt.getRoot().getKey());
+        assertEquals(1,bt.breadthFirst(bt));
 
         //add a left child and right child to a single root node
         bt.getRoot().setLeft(new Node(3));
