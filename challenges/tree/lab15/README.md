@@ -1,8 +1,8 @@
 # Trees
 
-[Code](../lib/src/main/java/challenges/tree)
+[Code](../../lib/src/main/java/challenges/tree)
 
-[Test](../lib/src/test/java/challenges/tree/TreeTest.java)
+[Test](../../lib/src/test/java/challenges/tree/TreeTest.java)
 
 
 

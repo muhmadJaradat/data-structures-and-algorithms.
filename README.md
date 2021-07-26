@@ -24,4 +24,6 @@
 
 * [Brackets Checker](challenges/BracketsChecker/README.md)
 
-* [Trees](challenges/tree/README.md)
+* [Trees](challenges/tree/lab15/README.md)
+
+* [TreesMax](challenges/tree/lab16/README.md)
