@@ -27,3 +27,5 @@
 * [Trees](challenges/tree/lab15/README.md)
 
 * [TreesMax](challenges/tree/lab16/README.md)
+
+* [Breadth First](challenges/tree/lab17/README.md)

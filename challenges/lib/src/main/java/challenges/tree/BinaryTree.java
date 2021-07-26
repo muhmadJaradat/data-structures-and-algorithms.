@@ -1,5 +1,8 @@
 package challenges.tree;
 
+import challenges.stackAndQueue.Queue;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree {
@@ -32,6 +35,24 @@ public class BinaryTree {
         }
         return list;
     }
+
+    public String breadthFirst(BinaryTree tree){
+        if (tree.getRoot()==null)return null;
+        List<Integer> list =new ArrayList<>();
+        Queue queue=new Queue<>();
+        Node node=tree.getRoot();
+        queue.enqueue(node);
+        while (queue.getFront()!=null) {
+            node = (Node) queue.dequeue();
+            list.add(node.getKey());
+            if (node.getLeft() != null) queue.enqueue(node.getLeft());
+            if (node.getRight() != null) queue.enqueue(node.getRight());
+        }
+return list.toString();
+        }
+
+
+
 
     public  int findMaxValue() throws IllegalStateException {
         if(this.root == null) {
