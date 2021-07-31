@@ -29,3 +29,5 @@
 * [TreesMax](challenges/tree/lab16/README.md)
 
 * [Breadth First](challenges/tree/lab17/README.md)
+
+* [FizzBuzz Tree](challenges/tree/lab18/README.md)
