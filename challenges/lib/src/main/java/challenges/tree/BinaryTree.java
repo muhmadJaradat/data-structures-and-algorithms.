@@ -5,7 +5,7 @@ import challenges.stackAndQueue.Queue;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTree {
+public class BinaryTree<Type> {
     private Node root;
 
     public List preOrder(Node node,List list){
@@ -38,9 +38,9 @@ public class BinaryTree {
 
     public String breadthFirst(BinaryTree tree){
         if (tree.getRoot()==null)return null;
-        List<Integer> list =new ArrayList<>();
+        List<Type> list =new ArrayList<Type>();
         Queue queue=new Queue<>();
-        Node node=tree.getRoot();
+        Node<Type> node=tree.getRoot();
         queue.enqueue(node);
         while (queue.getFront()!=null) {
             node = (Node) queue.dequeue();
@@ -53,7 +53,6 @@ return list.toString();
 
 
 
-
     public  int findMaxValue() throws IllegalStateException {
         if(this.root == null) {
             throw new IllegalStateException();
@@ -61,7 +60,7 @@ return list.toString();
         return findMaxHelper(this.root);
     }
 
-    private  int findMaxHelper(Node root) {
+    private  int findMaxHelper(Node<Integer> root) {
         int max = root.getKey();
         if(root.getLeft() != null) {
             max = max(max, findMaxHelper(root.getLeft()));
@@ -71,6 +70,25 @@ return list.toString();
         }
         return max;
     }
+
+    public boolean compareTwoDirectories(BinaryTree tree1,BinaryTree tree2){
+        return tree1.compareHelper() == tree2.compareHelper();
+    }
+    public int compareHelper(){
+        int num=0;
+        if (this.getRoot()==null)return 0;
+        Queue queue=new Queue<>();
+        Node<Type> node=this.getRoot();
+        queue.enqueue(node);
+        while (queue.getFront()!=null) {
+            node = (Node) queue.dequeue();
+            if (node.getLeft()==null&&node.getRight()==null)num++;
+            if (node.getLeft() != null) queue.enqueue(node.getLeft());
+            if (node.getRight() != null) queue.enqueue(node.getRight());
+        }
+return num;
+    }
+
 
     private static int max(int a, int b) {
         return Math.max(a, b);
