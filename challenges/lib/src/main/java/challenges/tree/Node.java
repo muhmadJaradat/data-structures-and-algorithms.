@@ -1,16 +1,12 @@
 package challenges.tree;
 
-public class Node<T> {
-    private final int key;
+public class Node<Type> {
+    private  Type key;
     private Node left;
     private Node right;
 
-    public Node(int key) {
+    public Node(Type key) {
         this.key = key;
-    }
-
-    public int getKey() {
-        return key;
     }
 
     public Node getLeft() {
@@ -28,4 +24,13 @@ public class Node<T> {
     public void setRight(Node right) {
         this.right = right;
     }
+
+    public Type getKey() {
+        return key;
+    }
+    public void setKey(Type key) {
+        this.key = key;
+    }
+
+
 }

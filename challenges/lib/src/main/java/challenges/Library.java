@@ -3,7 +3,6 @@
  */
 package challenges;
 
-import challenges.tree.BinarySearchTree;
 import challenges.tree.BinaryTree;
 import challenges.tree.Node;
 
@@ -14,22 +13,20 @@ public class Library {
         binaryTree.setRoot(node);
         binaryTree.getRoot().setLeft(new Node(2));
         binaryTree.getRoot().setRight(new Node(3));
-//        binaryTree.preOrder(binaryTree.getRoot());
-//        System.out.println("----");
-//        binaryTree.postOrder(binaryTree.getRoot());
-//        System.out.println("----");
-//        binaryTree.inOrder(binaryTree.getRoot());
-        BinarySearchTree bst=new BinarySearchTree();
-        System.out.println(bst.getRoot());
-        bst.setRoot(new Node(3));
-        System.out.println(bst.getRoot().getKey());
-        bst.add(4);
-        bst.add(2);
-        bst.add(7);
-        bst.add(5);
-        bst.add(8);
-        bst.add(1);
-        System.out.println(bst.contain(10));
+        binaryTree.getRoot().getLeft().setLeft(new  Node(4));
+        binaryTree.getRoot().getLeft().setRight(new Node(5));
+
+        BinaryTree binaryTree2=new BinaryTree();
+
+        binaryTree2.setRoot(new Node(16));
+        binaryTree2.getRoot().setLeft(new Node(2));
+        binaryTree2.getRoot().setRight(new Node(3));
+        binaryTree2.getRoot().getLeft().setLeft(new  Node(4));
+        binaryTree2.getRoot().getLeft().setRight(new Node(5));
+        binaryTree2.getRoot().getRight().setLeft(new Node(20));
+
+
+        System.out.println(binaryTree.compareTwoDirectories(binaryTree,binaryTree2));
 
     }
 }

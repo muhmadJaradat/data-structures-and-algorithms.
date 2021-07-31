@@ -16,7 +16,7 @@ public class TreeTest {
 
         // Check when only the tree has root
         bt.setRoot(new Node(1));
-        assertEquals(1,bt.breadthFirst(bt));
+        assertEquals(1,bt.getRoot().getKey());
 
         //add a left child and right child to a single root node
         bt.getRoot().setLeft(new Node(3));

@@ -1,6 +1,6 @@
 package challenges.tree;
 
-public class BinarySearchTree extends BinaryTree{
+public class BinarySearchTree<Type> extends BinaryTree<Type>{
 
     public  void add(int value) {
         if (this.getRoot()==null){
@@ -20,8 +20,9 @@ public class BinarySearchTree extends BinaryTree{
         return containTraverse(this.getRoot(),value);
     }
 
-    public void traverse(Node current, int value){
-        if (value<current.getKey()){
+    public void traverse(Node<Integer> current, int value){
+        int currentValue=  current.getKey();
+        if (value<currentValue){
             if (current.getLeft()==null){
                 current.setLeft(new Node(value));
                 return;
@@ -39,11 +40,12 @@ public class BinarySearchTree extends BinaryTree{
     }
 
 
-    public boolean containTraverse(Node current, int value){
-        if (value==current.getKey()){
+    public boolean containTraverse(Node<Integer> current, int value){
+        int currentValue=  current.getKey();
+        if (value==currentValue){
             return true;
         }
-        if (value<current.getKey()){
+        if (value<currentValue){
             if (current.getLeft()==null){
                 return false;
             }
