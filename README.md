@@ -31,3 +31,5 @@
 * [Breadth First](challenges/tree/lab17/README.md)
 
 * [FizzBuzz Tree](challenges/tree/lab18/README.md)
+
+* [Selection Sort](challenges/selectionSort/blog.md)

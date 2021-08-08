@@ -3,30 +3,14 @@
  */
 package challenges;
 
+import challenges.SelectionSort.SelectionSort;
 import challenges.tree.BinaryTree;
 import challenges.tree.Node;
 
 public class Library {
     public static void main(String[] args) {
-        BinaryTree binaryTree=new BinaryTree();
-        Node node=new Node(1);
-        binaryTree.setRoot(node);
-        binaryTree.getRoot().setLeft(new Node(2));
-        binaryTree.getRoot().setRight(new Node(3));
-        binaryTree.getRoot().getLeft().setLeft(new  Node(4));
-        binaryTree.getRoot().getLeft().setRight(new Node(5));
-
-        BinaryTree binaryTree2=new BinaryTree();
-
-        binaryTree2.setRoot(new Node(16));
-        binaryTree2.getRoot().setLeft(new Node(2));
-        binaryTree2.getRoot().setRight(new Node(3));
-        binaryTree2.getRoot().getLeft().setLeft(new  Node(4));
-        binaryTree2.getRoot().getLeft().setRight(new Node(5));
-        binaryTree2.getRoot().getRight().setLeft(new Node(20));
 
 
-        System.out.println(binaryTree.compareTwoDirectories(binaryTree,binaryTree2));
 
     }
 }
