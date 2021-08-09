@@ -3,14 +3,18 @@
  */
 package challenges;
 
+import challenges.MergeSort.Sort;
 import challenges.SelectionSort.SelectionSort;
 import challenges.tree.BinaryTree;
 import challenges.tree.Node;
 
+import java.util.Arrays;
+
 public class Library {
     public static void main(String[] args) {
 
-
-
+        Sort sort=new Sort();
+        int[] arr=new int[] {5,12,7,5,5,7};
+        System.out.println(Arrays.toString(sort.mergeSort(arr)));
     }
 }

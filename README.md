@@ -33,3 +33,5 @@
 * [FizzBuzz Tree](challenges/tree/lab18/README.md)
 
 * [Selection Sort](challenges/selectionSort/blog.md)
+
+* [Merge Sort](challenges/MergeSort/blog.md)

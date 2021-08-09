@@ -80,6 +80,4 @@ SelectionSort(int[] arr)
 
 
 ### Efficency
-- the time complexity for this algorithim is **O(n^2) **because the algorithim will keep comparing n1 and n2.
-
-
+ the time complexity for this algorithim is **O(n^2)
