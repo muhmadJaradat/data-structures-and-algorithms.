@@ -35,3 +35,5 @@
 * [Selection Sort](challenges/selectionSort/blog.md)
 
 * [Merge Sort](challenges/MergeSort/blog.md)
+
+* [Quick Sort](challenges/lib/src/main/java/challenges/QuickSort/blog.md)
