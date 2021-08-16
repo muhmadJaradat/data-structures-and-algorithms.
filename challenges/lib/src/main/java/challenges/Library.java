@@ -3,6 +3,7 @@
  */
 package challenges;
 
+import challenges.HashTable.Hashtable;
 import challenges.MergeSort.Sort;
 import challenges.SelectionSort.SelectionSort;
 import challenges.tree.BinaryTree;
@@ -12,9 +13,14 @@ import java.util.Arrays;
 
 public class Library {
     public static void main(String[] args) {
+        Hashtable<String, Integer> map = new Hashtable<>();
+        map.add("this", 1);
+        map.add("coder", 2);
+        map.add("this", 4);
+        map.add("hi", 5);
+        System.out.println(map.size());
+        System.out.println(map.size());
+        System.out.println(map.isEmpty());
 
-        Sort sort=new Sort();
-        int[] arr=new int[] {5,12,7,5,5,7};
-        System.out.println(Arrays.toString(sort.mergeSort(arr)));
     }
 }
