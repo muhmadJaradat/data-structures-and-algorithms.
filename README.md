@@ -41,3 +41,5 @@
 * [Hash Table](challenges/lib/src/main/java/challenges/HashTable/README.md)
 
 * [Repeated Word](challenges/lib/src/main/java/challenges/RepeatedWord/README.md)
+
+* [Tree Intersection](challenges/tree/treeintersection/README.md)
