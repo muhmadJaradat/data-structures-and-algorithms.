@@ -38,4 +38,6 @@
 
 * [Quick Sort](challenges/lib/src/main/java/challenges/QuickSort/blog.md)
 
+* [Hash Table](challenges/lib/src/main/java/challenges/HashTable/README.md)
+
 * [Repeated Word](challenges/lib/src/main/java/challenges/RepeatedWord/README.md)

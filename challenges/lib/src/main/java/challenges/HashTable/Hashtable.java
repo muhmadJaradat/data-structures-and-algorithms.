@@ -28,7 +28,6 @@ public class Hashtable<K, V> {
     }
 
     public int size() { return size; }
-    public boolean isEmpty() { return size() == 0; }
 
     private int hashCode (K key) {
         return Objects.hashCode(key);
@@ -66,6 +65,22 @@ public class Hashtable<K, V> {
 
         // If key not found
         return null;
+    }
+
+    public boolean contains(K key)
+    {
+        int bucketIndex = getBucketIndex(key);
+        int hashCode = hashCode(key);
+
+        Entry<K, V> head = bucketArray.get(bucketIndex);
+
+        while (head != null) {
+            if (head.key.equals(key) && head.hashCode == hashCode)
+                return true;
+            head = head.next;
+        }
+
+        return false;
     }
 
     // Adds a key value pair to hash
