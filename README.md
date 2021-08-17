@@ -37,3 +37,5 @@
 * [Merge Sort](challenges/MergeSort/blog.md)
 
 * [Quick Sort](challenges/lib/src/main/java/challenges/QuickSort/blog.md)
+
+* [Repeated Word](challenges/lib/src/main/java/challenges/RepeatedWord/README.md)
