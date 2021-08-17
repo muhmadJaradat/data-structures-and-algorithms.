@@ -3,7 +3,9 @@ package challenges.tree;
 import challenges.stackAndQueue.Queue;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class BinaryTree<Type> {
     private Node root;
@@ -77,8 +79,8 @@ return list.toString();
     public int compareHelper(){
         int num=0;
         if (this.getRoot()==null)return 0;
-        Queue queue=new Queue<>();
-        Node<Type> node=this.getRoot();
+        Queue<Object> queue=new Queue<>();
+        Node node=this.getRoot();
         queue.enqueue(node);
         while (queue.getFront()!=null) {
             node = (Node) queue.dequeue();
@@ -100,5 +102,20 @@ return num;
 
     public void setRoot(Node root) {
         this.root = root;
+    }
+
+   public   static Set intersection(BinaryTree tree1,BinaryTree tree2){
+        List list1=new ArrayList();
+        List list2=new ArrayList();
+        Set results=new HashSet();
+         list1=tree1.inOrder(tree1.getRoot(),list1);
+         list2=tree2.inOrder(tree2.getRoot(),list2);
+        for (Object ele:list1
+             ) {
+            if (list2.contains(ele)){
+                results.add(ele);
+            }
+        }
+        return results;
     }
 }
