@@ -43,3 +43,5 @@
 * [Repeated Word](challenges/lib/src/main/java/challenges/RepeatedWord/README.md)
 
 * [Tree Intersection](challenges/tree/treeintersection/README.md)
+
+* [Left Join](challenges/lib/src/main/java/challenges/LeftJoin/README.md)
