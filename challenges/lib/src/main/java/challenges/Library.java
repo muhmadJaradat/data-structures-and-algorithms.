@@ -20,7 +20,6 @@ public class Library {
         map.add("hi", 5);
         System.out.println(map.size());
         System.out.println(map.size());
-        System.out.println(map.isEmpty());
 
     }
 }
