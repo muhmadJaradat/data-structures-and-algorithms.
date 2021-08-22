@@ -36,6 +36,6 @@ public class LeftJoinTest {
         result.put("outfit", Arrays.asList("garb","null"));
         result.put("guide", Arrays.asList("usher","follow"));
 
-        assertEquals(result,LeftJoin.LeftJoin(map1,map2));
+        assertEquals(result,LeftJoin.leftJoin(map1,map2));
     }
 }
