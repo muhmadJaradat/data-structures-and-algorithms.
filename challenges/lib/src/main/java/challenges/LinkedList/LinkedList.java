@@ -147,7 +147,45 @@ current=next;
 list.head=previous;
         return list;
     }
+Node left;
+    boolean isPalindromeUtil(Node right)
+    {
+         left = head;
+
+        // Stop recursion when right becomes null
+        if (right == null)
+            return true;
+
+        // If sub-list is not palindrome then no need to
+        // check for the current left and right, return
+        // false
+        boolean isp = isPalindromeUtil(right.getNext());
+        if (isp == false)
+            return false;
+
+        // Check values at current left and right
+        boolean isp1 = (right.getData() == left.getData());
+
+        left = left.getNext();
+
+        // Move left to next node;
+        return isp1;
+    }
+
+    // A wrapper over isPalindrome(Node head)
+    boolean isPalindrome(Node head)
+    {
+        boolean result = isPalindromeUtil(head);
+        return result;
+    }
+
+    // Push a node to linked list. Note that
+// this function changes the head
 
 
 
+
+    public Node getHead() {
+        return head;
+    }
 }
