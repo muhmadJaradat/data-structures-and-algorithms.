@@ -18,9 +18,9 @@ public class Node<T> {
         this.neighbors = new LinkedList<>();
     }
 
-    protected boolean addEdge(Node<T> neighbor, Integer weight) {
+    protected void addEdge(Node<T> neighbor, Integer weight) {
         Edge<T> edge = new Edge<>(neighbor, weight);
-        return neighbors.add(edge);
+         neighbors.add(edge);
     }
 
     public boolean hasNeighbor(Node<T> checkNode) {
