@@ -2,9 +2,8 @@ package challenges.Graph;
 
 
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Graph<T> {
     protected Set<Node<T>> graph;
@@ -48,7 +47,41 @@ public class Graph<T> {
         return graph.size();
     }
 
+    public List<Node<T>> breadthFirst(Node<T> start) {
+        List<Node<T>> result = new LinkedList<>();
 
+        List<Node<T>> haveVisited = new LinkedList<>();
+        List<Edge<T>> firstNeighbors = start.neighbors;
+
+        if(firstNeighbors.isEmpty()) {
+            return result;
+        }
+
+        Queue<Node<T>> neighbors = new LinkedList<>();
+
+        // Put all the first neighbors in the queue and haveVisited
+        for(Edge<T> e : firstNeighbors) {
+            neighbors.add(e.neighbor);
+            haveVisited.add(e.neighbor);
+        }
+
+        // Enter loop until the Queue is empty
+        while(!neighbors.isEmpty()) {
+
+            // Peek at the Queue, enqueue all of it's neighbors
+            List<Edge<T>> temp = neighbors.peek().neighbors;
+            for(Edge<T> e : temp) {
+                if(e.neighbor != start && !haveVisited.contains(e.neighbor)) {
+                    neighbors.add(e.neighbor);
+                    haveVisited.add(e.neighbor);
+                }
+            }
+            // Dequeue and add Entry to results
+            result.add(neighbors.remove());
+
+        }
+        return result;
+    }
 
 
     public Set<Node<T>> getGraph() {

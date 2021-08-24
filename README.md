@@ -45,3 +45,7 @@
 * [Tree Intersection](challenges/tree/treeintersection/README.md)
 
 * [Left Join](challenges/lib/src/main/java/challenges/LeftJoin/README.md)
+
+* [Graph](challenges/lib/src/main/java/challenges/Graph/README.md)
+
+* [Graph Breadth First](challenges/lib/src/main/java/challenges/Graph/Lab36/README.md)
