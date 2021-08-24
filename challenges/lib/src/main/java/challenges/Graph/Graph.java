@@ -90,7 +90,36 @@ public class Graph<T> {
 
 
 
+    public  List<Node<T>> depthFirst(Node<T> startValue) {
 
+        Set<Node<T>> graph = this.getGraph();
+        List<Node<T>> result = new LinkedList<>();
+        Stack<Node<T>> stack = new Stack<>();
+        Set<Node<T>> visited = new HashSet<>();
+
+        if(graph.isEmpty()) {
+            return result;
+        }
+
+                stack.push(startValue);
+                visited.add(startValue);
+
+
+        while(!stack.isEmpty()) {
+            Node<T> temp = stack.pop();
+            result.add(temp);
+            for(Edge<T> e : temp.neighbors) {
+                if(!visited.contains(e.neighbor)) {
+                    stack.push(e.neighbor);
+                    visited.add(e.neighbor);
+                }
+            }
+        }
+
+        // If there are any "island" nodes, then add those to the result list
+
+        return result;
+    }
 
 
 

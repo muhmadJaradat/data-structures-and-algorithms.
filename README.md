@@ -49,3 +49,5 @@
 * [Graph](challenges/lib/src/main/java/challenges/Graph/README.md)
 
 * [Graph Breadth First](challenges/lib/src/main/java/challenges/Graph/Lab36/README.md)
+
+* [Graph Depth First](challenges/lib/src/main/java/challenges/Graph/Lab38/README.md)
