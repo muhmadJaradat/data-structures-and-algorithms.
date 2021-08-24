@@ -5,6 +5,7 @@ import challenges.Graph.Graph;
 import challenges.Graph.Node;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GraphTest {
@@ -143,6 +144,62 @@ public class GraphTest {
         assertEquals( "F",testResults.get(5).getValue());
         assertEquals("H",testResults.get(6).getValue());
         assertEquals( "I",testResults.get(7).getValue());
+    }
+
+    @Test
+    public void testDepthFirst() {
+        Graph<String> testGraph = new Graph<>();
+        Node<String> node1 = new Node<>("A");
+        Node<String> node2 = new Node<>("B");
+        Node<String> node3 = new Node<>("C");
+        Node<String> node4 = new Node<>("D");
+        Node<String> node5 = new Node<>("E");
+        Node<String> node6 = new Node<>("F");
+        Node<String> node7 = new Node<>("G");
+        Node<String> node8 = new Node<>("H");
+        Node<String> node9 = new Node<>("I");
+
+        testGraph.addNode(node1);
+        testGraph.addNode(node2);
+        testGraph.addNode(node3);
+        testGraph.addNode(node4);
+        testGraph.addNode(node5);
+        testGraph.addNode(node6);
+        testGraph.addNode(node7);
+        testGraph.addNode(node8);
+        testGraph.addNode(node9);
+
+        testGraph.addEdge(node1, node2, 10); // A - B
+        testGraph.addEdge(node1, node3, 10); // A - C
+        testGraph.addEdge(node1, node4, 10); // A - D
+        testGraph.addEdge(node1, node5, 10); // A - E
+        testGraph.addEdge(node1, node7, 10); // A - G
+        testGraph.addEdge(node3, node4, 10); // C - D
+        testGraph.addEdge(node6, node7, 10); // F - G
+        testGraph.addEdge(node7, node3, 10); // G - C
+        testGraph.addEdge(node7, node8, 10); // G - H
+        testGraph.addEdge(node8, node9, 10); // H - I
+
+
+
+        List<Node> result = new ArrayList<>(testGraph.depthFirst( node1));
+
+        assertEquals( "A", result.get(0).getValue());
+        assertEquals("G", result.get(1).getValue());
+        assertEquals("H", result.get(2).getValue());
+        assertEquals("I", result.get(3).getValue());
+        assertEquals("F", result.get(4).getValue());
+        assertEquals("E", result.get(5).getValue());
+        assertEquals("D", result.get(6).getValue());
+        assertEquals("C", result.get(7).getValue());
+        assertEquals("B", result.get(8).getValue());
+        assertEquals(9, result.size());
+
+        Graph<String> testGraph2 = new Graph<>();
+        assertTrue( testGraph2.depthFirst( node1).isEmpty());
+
+
+
     }
 
 
