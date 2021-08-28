@@ -1,31 +1,34 @@
 package challenges.stackAndQueue;
 
 public class Brackets<T> {
-int roundOpen,roundClose,curlyOpen,curlyClose,squareOpen,squareClose;
+    public boolean bracketsBalance(String str) {
+        Stack<Character> stack = new Stack<>();
 
-public boolean bracketsBalance(String str){
-    Stack<Character> stack =new Stack<>();
-    char newChar;
-    char[] ch= str.toCharArray();
-    for (char c:ch) {
-stack.push(c);
+        for (int i = 0; i < str.length(); i++) {
+            switch (str.charAt(i)) {
+                case '{':
+                case '[':
+                case '(':
+                    stack.push(str.charAt(i));
+                    break;
+                case '}':
+                    if (stack.peek() == '{') stack.pop();
+                    break;
+                case ')':
+                    if (stack.peek() == '(') stack.pop();
+                    break;
+                case ']':
+                    if (stack.peek() == '[') stack.pop();
+            }
+        }
+        return stack.isEmpty();
+
+
     }
-while (!stack.isEmpty()){
 
-     switch ( stack.pop()){
-         case '{':curlyOpen++;
-         break;
-         case '}':curlyClose++;
-         break;
-         case '(':roundOpen++;
-         break;
-         case ')':roundClose++;
-         break;
-         case '[':squareOpen++;
-         break;
-         case ']':squareClose++;
-     }
+    public static void main(String[] args) {
+
+    }
 }
-    return curlyOpen == curlyClose && squareOpen == squareClose && roundOpen == roundClose;
-}
-}
+
+
