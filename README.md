@@ -51,3 +51,5 @@
 * [Graph Breadth First](challenges/lib/src/main/java/challenges/Graph/Lab36/README.md)
 
 * [Graph Depth First](challenges/lib/src/main/java/challenges/Graph/Lab38/README.md)
+
+* [Graph Buisness Trip](challenges/lib/src/main/java/challenges/Graph/Lab37/README.md)

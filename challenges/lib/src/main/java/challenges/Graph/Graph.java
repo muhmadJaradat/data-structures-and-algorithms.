@@ -120,6 +120,42 @@ public class Graph<T> {
 
         return result;
     }
+    public Connection getEdge(String[] cities) {
+
+        int price = 0;
+        boolean followupFound = false;
+
+        for(int i = 0; i < cities.length - 1; i++) {
+            followupFound = false;
+            for(Node<T> n : graph) {
+                if(n.value.equals(cities[i])) {
+
+                    for(Edge e : n.neighbors) {
+                        if(e.neighbor.value.equals(cities[i + 1])) {
+                            price += e.weight;
+                            followupFound = true;
+                        }
+                    }
+                    if(!followupFound) {
+                        return new Connection(false, 0);
+                    }
+                }
+            }
+        }
+        if(!followupFound) {
+            return new Connection(false, 0);
+        }
+        return new Connection(true, price);
+    }
+
+    private boolean hasCity(String city) {
+        for(Node<T> n: this.graph) {
+            if(n.value.equals(city)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 
